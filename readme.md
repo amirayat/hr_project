@@ -29,5 +29,5 @@ uvicorn main:app --reload
 
 ### test
 `
-pytest --cov=app test_app.py 
+pytest test_main.py 
 ` 
