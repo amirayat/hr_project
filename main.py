@@ -5,6 +5,7 @@ from fastapi.exceptions import RequestValidationError
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 from exception import UnicornException, ValidationError
+import json
 
 from auth import authentication
 from router import user, arrival_departure
