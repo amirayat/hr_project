@@ -3,8 +3,8 @@
 ### create desire environments as follow
 `
 SECRET_KEY = ***
-ALGORITHM = ***
-ACCESS_TOKEN_EXPIRE_MINUTES = ***
+ALGORITHM = HS256
+ACCESS_TOKEN_EXPIRE_MINUTES = ***(in seconds)
 `
 
 ### create admin user command

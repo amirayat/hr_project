@@ -10,8 +10,13 @@ def replace_do_something():
     raise Exception()
 
 
-national_code = "1234567890"
 def test_employee_arrived(monkeypatch: pytest.MonkeyPatch):
-    response = client.get("/arrival_departure/{national_code}/arrivced/")
+    response = client.put("/arrival_departure/1234567890/arrived")
+    assert response.status_code == 200
+    assert response.json() == {"detail": "done."}
+
+
+def test_employee_departure(monkeypatch: pytest.MonkeyPatch):
+    response = client.put("/arrival_departure/1234567890/departured")
     assert response.status_code == 200
     assert response.json() == {"detail": "done."}
