@@ -1,7 +1,5 @@
 {
     "URI": "mongodb://localhost:27017/",
     "db": "hr_project",
-    "admin_collection" : "admin",
-    "employee_collection" : "employee",
-    "arrival_departure_collection" : "arrival_departure"
+    "arrivalDepartureCollection" : "arrival_departure"
 }
