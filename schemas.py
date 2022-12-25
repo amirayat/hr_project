@@ -35,8 +35,8 @@ class ArrivalDeparture(BaseModel):
     """
     national_code: str 
     arrived: bool
-    arrival_time: datetime = None
     departured: bool
-    departure_time: datetime = None
     date: datetime
-    presence_duration: float 
+    enter_exit_time: list
+    presence_duration: float
+
