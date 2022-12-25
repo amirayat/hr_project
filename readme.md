@@ -24,7 +24,7 @@ python3 scheduler.py
 
 ### to run project
 `
-uvicorn main:app --reload
+python3 main.py
 `
 
 ### test

@@ -20,6 +20,11 @@ app.add_middleware(
 )
 
 
+app.include_router(authentication.router)
+app.include_router(user.router)
+app.include_router(arrival_departure.router)
+
+
 @app.exception_handler(UnicornException)
 async def unicorn_exception_handler(request: Request, exc: UnicornException):
     """
@@ -82,18 +87,7 @@ async def validation_exception_handler(request: Request, exc: RequestValidationE
     )
 
 
-def config():
-    """
-    configure fastapi route
-    :return: None
-    """
-    app.include_router(authentication.router)
-    app.include_router(user.router)
-    app.include_router(arrival_departure.router)
-
-
 def main():
-    config()
     uvicorn.run(app, host="0.0.0.0", port=8000)
 
 
